@@ -7,7 +7,7 @@ using UnityEngine;
 [Serializable]
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> GeometryObjectModel;
+    public List<GameObject> GeometryObjectModel;
     private Camera cam;
     private int countObject;
 
