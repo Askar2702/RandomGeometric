@@ -191,6 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242051212}
   - component: {fileID: 242051211}
+  - component: {fileID: 242051213}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -210,14 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13b92a958302024bb280e413069d26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GeometryObjectModel:
-  - {fileID: 4059568778193338231, guid: f8e6041401277ae4da75111c940232aa, type: 3}
-  - {fileID: 7300239559245080915, guid: 727361afb7201974083b3e912f72508e, type: 3}
-  - {fileID: 4061601514741930862, guid: cc41b5945ba95454a8c97f1eaa13a1a4, type: 3}
-  item:
-    Cube: 
-    Sphere: Vova
-    Capsule: Haha
+  GeometryObjectModel: []
 --- !u!4 &242051212
 Transform:
   m_ObjectHideFlags: 0
@@ -232,6 +226,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &242051213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242051210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86483d74aa9340247ab357fee5f663bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 242051211}
+  _name: cube
+  path: C:\Users\User\Desktop\AssetBundle\
+  Cube: {fileID: 0}
+  Sphere: {fileID: 0}
+  Capsule: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +354,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.023584902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.023584902
       objectReference: {fileID: 0}
     - target: {fileID: 1494625109003112809, guid: 727361afb7201974083b3e912f72508e,
         type: 3}
@@ -467,31 +504,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
-        type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.023584902
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817497170456994687, guid: 727361afb7201974083b3e912f72508e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.023584902
       objectReference: {fileID: 0}
     - target: {fileID: 1844666623143326992, guid: 727361afb7201974083b3e912f72508e,
         type: 3}

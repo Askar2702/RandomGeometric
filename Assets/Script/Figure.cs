@@ -52,7 +52,7 @@ public class Figure : MonoBehaviour
                     Debug.Log("Good");
                 }
                 _time = 0;
-                panel.SetActive(false);
+                IsPanel(false);
             }
         }
         
@@ -63,13 +63,13 @@ public class Figure : MonoBehaviour
         _time = 4;
         touchCount++;
         if (panel.activeSelf) return;
-        panel.SetActive(true);
+        IsPanel(true);
     }
     protected void OnDestroy()
     {
         _update.Dispose();
     }
-    
+    public void IsPanel(bool activ) => panel.SetActive(activ);
     private void LoadData()
     {
         figureScriptable = Resources.Load(ScriptableName) as FigureScriptable;

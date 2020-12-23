@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> GeometryObjectModel;
     private Camera cam;
     private int countObject;
+    private Transform current;
 
     void Start()
     {
@@ -29,10 +30,17 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (Physics.Raycast(ray, out hit))
-            {//внутри селекта хранится ссылка на героя которого я выделил и снизу сравнивается тот ли если нет то бывшему селектку отправлятся сообщение чтоб онна зкрыла клетки и меню 
-
-                //  if (hit.collider.tag == "Player")
-               
+            {
+                if (hit.transform.GetComponent<Figure>()) 
+                {
+                    if (current == null)
+                        current = hit.transform;
+                    else if (current != hit.transform)
+                    {
+                        current.GetComponent<Figure>().IsPanel(false);
+                        current = hit.transform;
+                    }
+                }
             }
             else
             {
